@@ -1,0 +1,79 @@
+﻿# =========================================================
+# SAP B1 Engineering Copilot - .gitignore
+# =========================================================
+
+# ---------- Secrets / environment ----------
+.env
+.env.*
+!.env.example
+*.secret
+*.secrets
+secrets/
+credentials/
+
+# Certificates / private keys
+*.pfx
+*.p12
+*.key
+*.pem
+
+# ---------- .NET / Visual Studio ----------
+.vs/
+bin/
+obj/
+TestResults/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# NuGet
+packages/
+*.nupkg
+*.snupkg
+
+# ---------- Python ----------
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ---------- Node / UI5 ----------
+node_modules/
+dist/
+coverage/
+.npm/
+.npmrc
+
+# ---------- Logs / temp ----------
+*.log
+logs/
+tmp/
+temp/
+*.tmp
+
+# ---------- OS ----------
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ---------- IDE local state ----------
+.vscode/
+.idea/
+
+# ---------- SAP / local runtime ----------
+*.b1session
+*.session
+local-config/
+runtime-data/
+
+# ---------- Backups ----------
+*.bak
+*.backup
+*.old

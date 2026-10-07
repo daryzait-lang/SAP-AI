@@ -1,0 +1,39 @@
+project:
+  name: SAP B1 Engineering Copilot
+  repo: github
+  deployment: windows-server-iis
+
+sap:
+  product: SAP Business One for SAP HANA
+  version: "10.00.130"
+  feature_pack: "2008"
+  hotfix: "1"
+  architecture: x64
+
+legacy:
+  language: VB.NET
+  framework: ".NET Framework 4.7.2"
+  sap_apis:
+    - UI API
+    - DI API
+  crystal_addon_runtime: "13.0.40"
+
+target:
+  backend: "C# / ASP.NET Core / modern .NET"
+  frontend: "SAPUI5/OpenUI5"
+  sap_integration: "Service Layer"
+  hana_access: "DEV read-only"
+  agent_orchestration: Python
+
+git_policy:
+  direct_main_changes: false
+  agent_can_push_branches: true
+  agent_can_open_pr: true
+  agent_can_merge: false
+
+testing:
+  mandatory_for_each_migration: true
+
+security:
+  secrets_local_only: true
+  production_access: false
