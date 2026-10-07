@@ -1,0 +1,27 @@
+# ==============================================================================
+# SAP B1 Engineering Copilot - Plantilla de Configuración (settings.example.yaml)
+# ==============================================================================
+# AVISO DE SEGURIDAD CRÍTICO:
+# - JAMÁS coloque contraseñas, tokens de autenticación ni secretos en este archivo.
+# - Las credenciales sensibles deben residir exclusivamente en variables de entorno locales (.env).
+# ==============================================================================
+
+project:
+  name: "SAP B1 Engineering Copilot"
+  description: "Agente de ingeniería para modernización de soluciones SAP Business One 10 HANA"
+
+# Entorno de ejecución: DEV o PROD
+environment: "DEV"
+
+# Producción deshabilitada por defecto. Requiere política aprobada para habilitarse.
+allow_production: false
+
+sap:
+  # HANA DEV siempre opera en modo SOLO LECTURA para el agente
+  hana_read_only: true
+  service_layer_timeout_seconds: 30
+  service_layer_verify_ssl: true
+
+logging:
+  level: "INFO"
+  sanitize_secrets: true
